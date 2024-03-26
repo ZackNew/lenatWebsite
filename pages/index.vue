@@ -9,19 +9,16 @@
         <div
           class="md:flex px-12 md:px-2 justify-around mt-16 md:w-[80%] lg:w-[60%] mx-auto mb-5 md:mb-0"
         >
-          <a
-            href="https://play.google.com/store/apps/details?id=com.lenat.lenat"
+          <div
+            class="flex items-center justify-center bg-[#1e4ed9] rounded w-full mx-1 mb-4 py-3 cursor-pointer"
+            @click="redirectTo('playStore')"
           >
-            <div
-              class="flex items-center justify-center bg-[#1e4ed9] rounded w-full mx-1 mb-4 py-3 cursor-pointer"
-            >
-              <img class="w-7 h-7 mr-2" src="/playstore.svg" alt="" />
-              <div>
-                <p class="text-xs text-center text-white">GET IT ON</p>
-                <p class="text-white font-semibold text-center">Google Play</p>
-              </div>
+            <img class="w-7 h-7 mr-2" src="/playstore.svg" alt="" />
+            <div>
+              <p class="text-xs text-center text-white">GET IT ON</p>
+              <p class="text-white font-semibold text-center">Google Play</p>
             </div>
-          </a>
+          </div>
           <div
             class="flex items-center justify-center border rounded w-full mb-4 mx-1 py-3"
           >
@@ -36,3 +33,12 @@
     </div>
   </div>
 </template>
+
+<script setup lang="ts">
+const redirectTo = (whereTo: string) => {
+  window.open(
+    "https://play.google.com/store/apps/details?id=com.lenat.lenat",
+    "_black"
+  );
+};
+</script>
