@@ -99,6 +99,7 @@
           </div>
         </div>
       </div>
+      <div class="hidden md:block"></div>
     </div>
   </div>
 </template>

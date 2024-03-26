@@ -15,7 +15,8 @@
           class="md:flex md:bg-white px-2 py-3 justify-around mt-16 w-[80%] mb-5 md:mb-0"
         >
           <div
-            class="flex items-center justify-center bg-[#1e4ed9] rounded w-full mx-1 mb-4 md:mb-0 py-1 sm:py-0"
+            class="flex items-center justify-center bg-[#1e4ed9] rounded w-full mx-1 mb-4 md:mb-0 py-1 sm:py-0 cursor-pointer"
+            @click="redirectTo('playStore')"
           >
             <img class="w-7 h-7 mr-2" src="/playstore.svg" alt="" />
             <div>
@@ -37,7 +38,7 @@
       <div class="flex justify-between hidden w-[50%] sm:block">
         <img
           class="w-auto max-h-[700px] w-[300px] mx-auto"
-          src="/images/Phone.png"
+          src="/images/Fromt_image.png"
           alt=""
         />
       </div>
@@ -49,6 +50,15 @@
     </div>
   </div>
 </template>
+
+<script setup lang="ts">
+const redirectTo = (whereTo: string) => {
+  window.open(
+    "https://play.google.com/store/apps/details?id=com.lenat.lenat",
+    "_black"
+  );
+};
+</script>
 
 <style scoped>
 .customPosition {
