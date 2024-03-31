@@ -55,13 +55,6 @@
               </nuxt-link>
             </li>
           </ul>
-          <nuxt-link :to="'/auth/signin'">
-            <button
-              class="text-white bg-gradient-to-r from-gray-600 to-cyan-900 rounded py-1 px-4 font-semibold whitespace-nowrap"
-            >
-              Doctors Sign in
-            </button>
-          </nuxt-link>
         </div>
         <div class="block md:hidden relative">
           <Icon
@@ -92,14 +85,20 @@
               <li class="px-6 py-2 border-b hover:bg-gray-100">
                 <nuxt-link :to="'/contact'">Contact</nuxt-link>
               </li>
-              <li class="px-6 py-2 whitespace-nowrap">
-                <nuxt-link :to="'/auth/signin'">Doctors Sign in</nuxt-link>
-              </li>
+              <li class="px-6 py-2 whitespace-nowrap"></li>
             </ul>
           </div>
         </div>
       </div>
-      <div class="hidden md:block"></div>
+      <div class="hidden md:block mr-2">
+        <nuxt-link :to="'/auth/signin'">
+          <button
+            class="text-white bg-gradient-to-r from-gray-600 to-cyan-900 rounded py-1 px-4 font-semibold whitespace-nowrap"
+          >
+            Doctors Sign in
+          </button>
+        </nuxt-link>
+      </div>
     </div>
   </div>
 </template>

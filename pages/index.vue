@@ -20,7 +20,8 @@
             </div>
           </div>
           <div
-            class="flex items-center justify-center border rounded w-full mb-4 mx-1 py-3"
+            class="flex items-center justify-center border rounded w-full mb-4 mx-1 py-3 cursor-pointer"
+            @click="redirectTo('appStore')"
           >
             <img class="w-8 h-8 mr-2" src="/apple-icon.webp" alt="" />
             <div>
@@ -36,9 +37,16 @@
 
 <script setup lang="ts">
 const redirectTo = (whereTo: string) => {
-  window.open(
-    "https://play.google.com/store/apps/details?id=com.lenat.lenat",
-    "_black"
-  );
+  if (whereTo === "playStore") {
+    window.open(
+      "https://play.google.com/store/apps/details?id=com.lenat.lenat",
+      "_black"
+    );
+  } else if (whereTo === "appStore") {
+    window.open(
+      "https://play.google.com/store/apps/details?id=com.lenat.lenat",
+      "_black"
+    );
+  }
 };
 </script>
